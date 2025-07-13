@@ -47,6 +47,7 @@
             button16 = new Button();
             button17 = new Button();
             label1 = new Label();
+            label2 = new Label();
             SuspendLayout();
             // 
             // textBox1
@@ -199,6 +200,7 @@
             button13.TabIndex = 13;
             button13.Text = "-";
             button13.UseVisualStyleBackColor = true;
+            button13.Click += button13_Click;
             // 
             // button14
             // 
@@ -209,6 +211,7 @@
             button14.TabIndex = 14;
             button14.Text = "*";
             button14.UseVisualStyleBackColor = true;
+            button14.Click += button14_Click;
             // 
             // button15
             // 
@@ -219,6 +222,7 @@
             button15.TabIndex = 15;
             button15.Text = "/";
             button15.UseVisualStyleBackColor = true;
+            button15.Click += button15_Click;
             // 
             // button16
             // 
@@ -235,21 +239,35 @@
             // 
             button17.BackColor = SystemColors.GradientActiveCaption;
             button17.Font = new Font("Segoe UI", 11.0769234F, FontStyle.Bold);
-            button17.Location = new Point(107, 402);
+            button17.Location = new Point(106, 409);
             button17.Name = "button17";
             button17.Size = new Size(156, 54);
             button17.TabIndex = 17;
             button17.Text = "=";
             button17.UseVisualStyleBackColor = false;
+            button17.Click += button17_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(298, 9);
+            label1.Font = new Font("Segoe UI", 8.861538F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label1.Location = new Point(216, 9);
             label1.Name = "label1";
-            label1.Size = new Size(0, 21);
+            label1.Size = new Size(28, 21);
             label1.TabIndex = 18;
+            label1.Text = "00";
             label1.Click += label1_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 8.861538F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label2.Location = new Point(250, 9);
+            label2.Name = "label2";
+            label2.Size = new Size(28, 21);
+            label2.TabIndex = 19;
+            label2.Text = "00";
+            label2.Click += label2_Click;
             // 
             // Form1
             // 
@@ -258,6 +276,7 @@
             BackColor = SystemColors.ButtonFace;
             BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(375, 475);
+            Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(button17);
             Controls.Add(button16);
@@ -307,5 +326,6 @@
         private Button button16;
         private Button button17;
         private Label label1;
+        private Label label2;
     }
 }

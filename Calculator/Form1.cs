@@ -76,6 +76,9 @@ namespace Calculator
         private void button11_Click(object sender, EventArgs e)
         {
             textBox1.Text = "";
+            label1.Text = "";
+            label2.Text = "";
+
         }
 
         private void button16_Click(object sender, EventArgs e)
@@ -87,6 +90,62 @@ namespace Calculator
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            value1 = Convert.ToInt32(textBox1.Text);
+            sign = "-";
+            label1.Text = textBox1.Text + sign;
+            textBox1.Text = "";
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            value1 = Convert.ToInt32(textBox1.Text);
+            sign = "*";
+            label1.Text = textBox1.Text + sign;
+            textBox1.Text = "";
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            value1 = Convert.ToInt32(textBox1.Text);
+            sign = "/";
+            label1.Text = textBox1.Text + sign;
+            textBox1.Text = "";
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            value2 = Convert.ToInt32(textBox1.Text);
+            label2.Text = textBox1.Text;
+            if (sign == "+")
+            {
+                result = value1 + value2;
+                textBox1.Text = Convert.ToString(result);
+            }
+            else if (sign == "-")
+            {
+                result = value1 - value2;
+                textBox1.Text = Convert.ToString(result);
+            }
+            else if (sign == "*")
+            {
+                result = value1 * value2;
+                textBox1.Text = Convert.ToString(result);
+            }
+            else if (sign == "/")
+            {
+                result = value1 / value2;
+                textBox1.Text = Convert.ToString(result);
+            }
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
