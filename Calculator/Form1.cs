@@ -5,6 +5,7 @@ namespace Calculator
         int value1;
         int value2;
         double result = 0;
+        string sign;
 
         public Form1()
         {
@@ -82,7 +83,12 @@ namespace Calculator
             value1 = Convert.ToInt32(textBox1.Text);
             sign = "+";
             label1.Text = textBox1.Text + sign;
-            textBox.Text = "";
+            textBox1.Text = "";
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
